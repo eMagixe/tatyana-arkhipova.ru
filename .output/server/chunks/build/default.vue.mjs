@@ -2763,7 +2763,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     ]);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UNavigationMenu = _sfc_main$1;
-      _push(`<!--[--><div class="w-full flex justify-around items-center"><h1 class="text-primary-500"> Татьяна Архипова </h1>`);
+      _push(`<!--[--><div class="w-full flex justify-around items-center sticky top-0 z-50 bg-white shadow"><h1 class="text-primary-500"> Татьяна Архипова </h1>`);
       _push(ssrRenderComponent(_component_UNavigationMenu, {
         items: unref(navs),
         class: "w-[50%] justify-end px-4 p-8"

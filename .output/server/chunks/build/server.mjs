@@ -803,6 +803,11 @@ const cfg0 = defineAppConfig({
         header: "gradient-bg"
       }
     },
+    navigationMenu: {
+      slots: {
+        linkLabel: "text-[16px]"
+      }
+    },
     icons: {
       arrowLeft: "i-lucide-arrow-left",
       arrowRight: "i-lucide-arrow-right",

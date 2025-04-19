@@ -31,7 +31,7 @@ const navs = ref<NavigationMenuItem[]>([
 </script>
 
 <template>
-	<div class="w-full flex justify-around items-center">
+	<div class="w-full flex justify-around items-center sticky top-0 z-50 bg-white shadow">
 		<h1 class="text-primary-500">
 			Татьяна Архипова
 		</h1>
