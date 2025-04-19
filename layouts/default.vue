@@ -35,7 +35,10 @@ const navs = ref<NavigationMenuItem[]>([
 		<h1 class="text-primary-500">
 			Татьяна Архипова
 		</h1>
-		<UNavigationMenu :items="navs" class="w-[50%] justify-end px-4 p-8"/>
+		<h1 class="text-gray-500 !text-[28px] opacity-65 rotate-[-3deg]">
+			3D Artist / 3D Modeler / 3D Visualizer
+		</h1>
+		<UNavigationMenu :items="navs" class="justify-end px-4 p-8"/>
 	</div>
 
 	<div class="flex flex-col items-center justify-start w-full min-h-[100vh]">
