@@ -3,7 +3,7 @@
 </script>
 
 <template>
-	{{ data }}
+
 </template>
 
 <style scoped>
