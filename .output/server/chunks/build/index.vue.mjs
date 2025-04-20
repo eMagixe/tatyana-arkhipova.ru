@@ -4,7 +4,7 @@ import { u as useStrapi } from './useStrapi.mjs';
 import { u as useAsyncData } from './asyncData.mjs';
 import { useForwardProps, useForwardPropsEmits, DialogRoot, DialogTrigger, DialogPortal, DialogOverlay, DialogContent, VisuallyHidden, DialogTitle, DialogDescription, DialogClose, Primitive } from 'reka-ui';
 import { createSharedComposable, reactivePick, computedAsync } from '@vueuse/core';
-import { g as get, p as pickLinkProps, u as useButtonGroup, a as useComponentIcons, _ as _sfc_main$4, o as omit, b as _sfc_main$5, c as _sfc_main$7, d as _sfc_main$8 } from './Link.vue2.mjs';
+import { g as get, p as pickLinkProps, u as useButtonGroup, a as useComponentIcons, _ as _sfc_main$4, o as omit, b as _sfc_main$5, c as _sfc_main$7 } from './Link.vue2.mjs';
 import { l as defu } from '../nitro/nitro.mjs';
 import { b as _appConfig, c as useAppConfig } from './server.mjs';
 import { t as tv } from './tv.mjs';
@@ -1723,7 +1723,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const _component_LazyProjectItem = __nuxt_component_0_lazy;
       const _component_UModal = _sfc_main$2;
       const _component_UCarousel = _sfc_main$1;
-      const _component_NuxtImg = _sfc_main$8;
       _push(`<!--[--><div class="bg-[url(&#39;/images/skills.jpg&#39;)] flex justify-start items-end w-full h-[280px] bg-cover bg-center"><div class="w-full h-[80px] px-[100px] gradient-bg flex justify-start opacity-95 items-center"><h1 class="text-4xl text-white">Проекты</h1></div></div><div class="px-[100px] py-[50px] w-full flex flex-col gap-4">`);
       if (unref(projects) && unref(projects).length > 0) {
         _push(`<!--[-->`);
@@ -1759,18 +1758,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 default: withCtx(({ item }, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
                     if (item.url) {
-                      _push3(ssrRenderComponent(_component_NuxtImg, {
-                        class: "rounded-lg m-auto animation",
-                        loading: "lazy",
-                        alt: item.url,
-                        src: `http://tatyana-arkhipova.ru:1337${item.url}`
-                      }, null, _parent3, _scopeId2));
+                      _push3(`<img class="rounded-lg m-auto animation" loading="lazy"${ssrRenderAttr("alt", item.url)}${ssrRenderAttr("src", `http://tatyana-arkhipova.ru:1337${item.url}`)}${_scopeId2}>`);
                     } else {
                       _push3(`<!---->`);
                     }
                   } else {
                     return [
-                      item.url ? (openBlock(), createBlock(_component_NuxtImg, {
+                      item.url ? (openBlock(), createBlock("img", {
                         key: 0,
                         class: "rounded-lg m-auto animation",
                         loading: "lazy",
@@ -1797,7 +1791,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   class: "w-[90%]"
                 }, {
                   default: withCtx(({ item }) => [
-                    item.url ? (openBlock(), createBlock(_component_NuxtImg, {
+                    item.url ? (openBlock(), createBlock("img", {
                       key: 0,
                       class: "rounded-lg m-auto animation",
                       loading: "lazy",

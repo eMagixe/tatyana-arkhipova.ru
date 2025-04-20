@@ -69,9 +69,9 @@ const openModal = (project: Project, id: number) => {
 									 :start-index="photoIndex"
 									 arrows class="w-[90%]"
 				>
-					<NuxtImg v-if="item.url" class="rounded-lg m-auto animation" loading="lazy"
-									 :alt="item.url"
-									 :src="`http://tatyana-arkhipova.ru:1337${item.url}`"></NuxtImg>
+					<img v-if="item.url" class="rounded-lg m-auto animation " loading="lazy"
+							 :alt="item.url"
+							 :src="`http://tatyana-arkhipova.ru:1337${item.url}`"/>
 				</UCarousel>
 			</div>
 		</template>
