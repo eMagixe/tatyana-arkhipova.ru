@@ -1,7 +1,7 @@
 import { computed, defineComponent, onServerPrefetch, h } from 'vue';
 import { getIconCSS } from '@iconify/utils/lib/css/icon';
 import { getIcon, loadIcon as loadIcon$1, Icon } from '@iconify/vue';
-import { d as useAppConfig, f as useNuxtApp, g as useRuntimeConfig, u as useHead } from './server.mjs';
+import { b as useAppConfig, f as useNuxtApp, g as useRuntimeConfig, u as useHead } from './server.mjs';
 import { u as useAsyncData } from './asyncData.mjs';
 import '../nitro/nitro.mjs';
 import 'node:http';

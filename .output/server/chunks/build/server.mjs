@@ -1789,5 +1789,5 @@ const server = /*#__PURE__*/Object.freeze({
   default: entry$1
 });
 
-export { _export_sfc as _, _appConfig as a, useStrapiClient as b, useRoute as c, useAppConfig as d, useRouter as e, useNuxtApp as f, useRuntimeConfig as g, nuxtLinkDefaults as h, asyncDataDefaults as i, createError as j, navigateTo as n, resolveRouteObject as r, server as s, useHead as u };
+export { _export_sfc as _, _appConfig as a, useAppConfig as b, useStrapiClient as c, useRoute as d, useRouter as e, useNuxtApp as f, useRuntimeConfig as g, nuxtLinkDefaults as h, asyncDataDefaults as i, createError as j, navigateTo as n, resolveRouteObject as r, server as s, useHead as u };
 //# sourceMappingURL=server.mjs.map

@@ -1,56 +1,70 @@
 const client_manifest = {
-  "_B7O2udLZ.js": {
+  "_B1g76GJa.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "B7O2udLZ.js",
+    "file": "B1g76GJa.js",
     "name": "Skeleton.vue",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_CuVLIiz0.js"
+      "_CpYDopVB.js"
     ]
   },
-  "_CRoRV9dJ.js": {
+  "_BLKRQWXW.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "CRoRV9dJ.js",
+    "file": "BLKRQWXW.js",
     "name": "Icon.vue",
     "imports": [
       "node_modules/@nuxt/icon/dist/runtime/components/index.js",
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_CajE1coE.js": {
+  "_CAMI_lpK.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "CajE1coE.js",
+    "file": "CAMI_lpK.js",
+    "name": "Link.vue",
+    "imports": [
+      "_BLKRQWXW.js",
+      "node_modules/nuxt/dist/app/entry.js",
+      "_CpYDopVB.js",
+      "_DdS7qaKm.js"
+    ]
+  },
+  "_CIyfj7Ne.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "CIyfj7Ne.js",
     "name": "asyncData",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_CuVLIiz0.js": {
+  "_CpYDopVB.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "CuVLIiz0.js",
+    "file": "CpYDopVB.js",
     "name": "tv",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_GHGHMNN3.js": {
+  "_DdS7qaKm.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "GHGHMNN3.js",
+    "file": "DdS7qaKm.js",
     "name": "nuxt-link",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
@@ -61,15 +75,16 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Btn8MfkE.js",
+    "file": "DQjqABur.js",
     "name": "default",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_CRoRV9dJ.js",
+      "_CAMI_lpK.js",
+      "_BLKRQWXW.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_CuVLIiz0.js",
-      "_GHGHMNN3.js",
+      "_CpYDopVB.js",
+      "_DdS7qaKm.js",
       "node_modules/@nuxt/icon/dist/runtime/components/index.js"
     ],
     "css": [
@@ -87,7 +102,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Cl4bj3ZQ.js",
+    "file": "CLDzhDX8.js",
     "name": "index",
     "src": "node_modules/@nuxt/icon/dist/runtime/components/index.js",
     "isDynamicEntry": true,
@@ -95,17 +110,77 @@ const client_manifest = {
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
+  "node_modules/embla-carousel-auto-height/esm/embla-carousel-auto-height.esm.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "Ddyvc1_j.js",
+    "name": "embla-carousel-auto-height.esm",
+    "src": "node_modules/embla-carousel-auto-height/esm/embla-carousel-auto-height.esm.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/embla-carousel-auto-scroll/esm/embla-carousel-auto-scroll.esm.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "LVG_eY9u.js",
+    "name": "embla-carousel-auto-scroll.esm",
+    "src": "node_modules/embla-carousel-auto-scroll/esm/embla-carousel-auto-scroll.esm.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/embla-carousel-autoplay/esm/embla-carousel-autoplay.esm.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "Dtrtw0zj.js",
+    "name": "embla-carousel-autoplay.esm",
+    "src": "node_modules/embla-carousel-autoplay/esm/embla-carousel-autoplay.esm.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/embla-carousel-class-names/esm/embla-carousel-class-names.esm.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "mhJ-osCf.js",
+    "name": "embla-carousel-class-names.esm",
+    "src": "node_modules/embla-carousel-class-names/esm/embla-carousel-class-names.esm.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/embla-carousel-fade/esm/embla-carousel-fade.esm.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "wrqBHFeW.js",
+    "name": "embla-carousel-fade.esm",
+    "src": "node_modules/embla-carousel-fade/esm/embla-carousel-fade.esm.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/embla-carousel-wheel-gestures/dist/embla-carousel-wheel-gestures.esm.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "BBOg-l_X.js",
+    "name": "embla-carousel-wheel-gestures.esm",
+    "src": "node_modules/embla-carousel-wheel-gestures/dist/embla-carousel-wheel-gestures.esm.js",
+    "isDynamicEntry": true
+  },
   "node_modules/nuxt/dist/app/components/error-404.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Bak3LMlQ.js",
+    "file": "BzJBwA-y.js",
     "name": "error-404",
     "src": "node_modules/nuxt/dist/app/components/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_GHGHMNN3.js",
+      "_DdS7qaKm.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": []
@@ -121,7 +196,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BwcJNnOT.js",
+    "file": "Ct58QNaW.js",
     "name": "error-500",
     "src": "node_modules/nuxt/dist/app/components/error-500.vue",
     "isDynamicEntry": true,
@@ -141,7 +216,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "xyFpivn3.js",
+    "file": "BVzmR4iI.js",
     "name": "entry",
     "src": "node_modules/nuxt/dist/app/entry.js",
     "isEntry": true,
@@ -157,12 +232,12 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BzfXy0iY.js",
+    "file": "B4gbPFPg.js",
     "name": "about",
     "src": "pages/about.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_CajE1coE.js",
+      "_CIyfj7Ne.js",
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
@@ -171,13 +246,13 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BJaiWN9o.js",
+    "file": "Dohc7PKl.js",
     "name": "contacts",
     "src": "pages/contacts.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_CRoRV9dJ.js",
-      "_CajE1coE.js",
+      "_BLKRQWXW.js",
+      "_CIyfj7Ne.js",
       "node_modules/nuxt/dist/app/entry.js",
       "node_modules/@nuxt/icon/dist/runtime/components/index.js"
     ]
@@ -187,15 +262,15 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "4WFzWbZe.js",
+    "file": "BYhHPabS.js",
     "name": "education",
     "src": "pages/education.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_B7O2udLZ.js",
-      "_CajE1coE.js",
+      "_B1g76GJa.js",
+      "_CIyfj7Ne.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_CuVLIiz0.js"
+      "_CpYDopVB.js"
     ]
   },
   "pages/index.vue": {
@@ -203,12 +278,27 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DhfBZp-t.js",
+    "file": "DU11CqSY.js",
     "name": "index",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
+      "node_modules/nuxt/dist/app/entry.js",
+      "_CAMI_lpK.js",
+      "_BLKRQWXW.js",
+      "_CpYDopVB.js",
+      "_B1g76GJa.js",
+      "_CIyfj7Ne.js",
+      "_DdS7qaKm.js",
+      "node_modules/@nuxt/icon/dist/runtime/components/index.js"
+    ],
+    "dynamicImports": [
+      "node_modules/embla-carousel-autoplay/esm/embla-carousel-autoplay.esm.js",
+      "node_modules/embla-carousel-auto-scroll/esm/embla-carousel-auto-scroll.esm.js",
+      "node_modules/embla-carousel-auto-height/esm/embla-carousel-auto-height.esm.js",
+      "node_modules/embla-carousel-class-names/esm/embla-carousel-class-names.esm.js",
+      "node_modules/embla-carousel-fade/esm/embla-carousel-fade.esm.js",
+      "node_modules/embla-carousel-wheel-gestures/dist/embla-carousel-wheel-gestures.esm.js"
     ]
   },
   "pages/jobs.vue": {
@@ -216,15 +306,15 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Bw4Zi17Q.js",
+    "file": "D_P3rqrA.js",
     "name": "jobs",
     "src": "pages/jobs.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_B7O2udLZ.js",
-      "_CajE1coE.js",
+      "_B1g76GJa.js",
+      "_CIyfj7Ne.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_CuVLIiz0.js"
+      "_CpYDopVB.js"
     ]
   },
   "pages/skills.vue": {
@@ -232,17 +322,17 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "H8anIAaM.js",
+    "file": "YxHyE_zz.js",
     "name": "skills",
     "src": "pages/skills.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_CRoRV9dJ.js",
-      "_B7O2udLZ.js",
-      "_CajE1coE.js",
+      "_BLKRQWXW.js",
+      "_B1g76GJa.js",
+      "_CIyfj7Ne.js",
       "node_modules/nuxt/dist/app/entry.js",
       "node_modules/@nuxt/icon/dist/runtime/components/index.js",
-      "_CuVLIiz0.js"
+      "_CpYDopVB.js"
     ]
   }
 };
