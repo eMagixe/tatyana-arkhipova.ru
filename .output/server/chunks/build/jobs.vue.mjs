@@ -1,9 +1,9 @@
 import { defineComponent, ref, withAsyncContext, unref, useSSRContext } from 'vue';
-import { ssrRenderList, ssrInterpolate, ssrRenderComponent } from 'vue/server-renderer';
+import { ssrInterpolate, ssrRenderList, ssrRenderComponent } from 'vue/server-renderer';
 import { u as useStrapi } from './useStrapi.mjs';
+import { a as useStrapiClient } from './server.mjs';
 import { u as useAsyncData } from './asyncData.mjs';
 import { _ as _sfc_main$1 } from './Skeleton.vue2.mjs';
-import './server.mjs';
 import '../nitro/nitro.mjs';
 import 'node:http';
 import 'node:https';
@@ -15,6 +15,7 @@ import 'node:crypto';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
+import 'ipx';
 import 'vue-router';
 import '@iconify/vue';
 import 'qs';
@@ -36,6 +37,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     let __temp, __restore;
     const { find } = useStrapi();
     const jobs = ref([]);
+    useStrapiClient();
     const { data, refresh, error } = ([__temp, __restore] = withAsyncContext(() => useAsyncData(
       "Experiences",
       () => find("experiences")
@@ -45,7 +47,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     }
     return (_ctx, _push, _parent, _attrs) => {
       const _component_USkeleton = _sfc_main$1;
-      _push(`<!--[--><div class="bg-[url(&#39;/images/jobs.jpg&#39;)] flex justify-start items-end w-full h-[280px] bg-cover bg-center"><div class="w-full h-[80px] px-[100px] gradient-bg flex justify-start opacity-95 items-center"><h1 class="text-4xl text-white">Мой опыт работы</h1></div></div><div class="px-[100px] py-[50px] w-full flex gap-4">`);
+      _push(`<!--[--><div class="bg-[url(&#39;/images/jobs.jpg&#39;)] flex justify-start items-end w-full h-[280px] bg-cover bg-center"><div class="w-full h-[80px] px-[100px] gradient-bg flex justify-start opacity-95 items-center"><h1 class="text-4xl text-white">Мой опыт работы</h1></div></div> ${ssrInterpolate(unref(error))} <div class="px-[100px] py-[50px] w-full flex gap-4">`);
       if (unref(jobs).length > 0) {
         _push(`<!--[-->`);
         ssrRenderList(unref(jobs), (job) => {
@@ -53,9 +55,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         });
         _push(`<!--]-->`);
       } else {
-        _push(`<div class="w-full h-full"><template>`);
-        _push(ssrRenderComponent(_component_USkeleton, { class: "h-[50px] w-full" }, null, _parent));
-        _push(`</template>`);
+        _push(`<div class="w-full h-full">`);
         _push(ssrRenderComponent(_component_USkeleton, { class: "h-[200px] w-full" }, null, _parent));
         _push(`</div>`);
       }

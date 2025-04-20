@@ -1,5 +1,5 @@
 import { createTV } from 'tailwind-variants';
-import { a as _appConfig } from './server.mjs';
+import { b as _appConfig } from './server.mjs';
 
 var _a;
 const appConfigTv = _appConfig;

@@ -7,18 +7,39 @@ type Project = {
 	name: string
 	about: string
 	type: string
-	photos: { url: string } []
+	photos: {
+		url: string, formats: {
+			small: { url: string }
+		}
+	}[]
 }
 
 const projects = ref<Project[]>([])
 
-const {data} = await useAsyncData(
+const {data, status} = await useAsyncData(
 		'projects',
 		() => find<Project[]>('projects')
 )
 
 if (data.value !== null) {
 	projects.value = data.value as any
+}
+
+const isOpen = ref(false)
+const currentProject = ref<Project>({
+	id: 0,
+	name: '',
+	about: '',
+	type: '',
+	photos: []
+})
+
+const photoIndex = ref(0)
+
+const openModal = (project: Project, id: number) => {
+	isOpen.value = true
+	photoIndex.value = id
+	currentProject.value = project
 }
 
 </script>
@@ -36,29 +57,25 @@ if (data.value !== null) {
 				 v-for="project in projects"
 				 :key="project.id"
 		>
-			<div class="h-[60px] flex items-center justify-between header">
-				<div class="h-[60px] flex gap-8 items-center">
-					<div class="w-[2px] h-[60px] gradient-bg"></div>
-					<h2 class="text-2xl font-bold text-primary-500">{{ project.name }}</h2>
-				</div>
-				<p class="mr-8 text-2xl text-primary-500">{{ project.type }}</p>
-			</div>
-			<div class="grid grid-cols-1 gap-4 p-4">
-				<UCarousel v-if="project.photos.length > 0" v-slot="{ item }" :items="project.photos" dots
-									 :ui="{ item: 'basis-1/3' }"
-									 class="w-full h-[350px] flex mb-[30px]">
-					<img :alt="item.url" :src="`http://tatyana-arkhipova.ru:1337${item.url}`" class="rounded-lg">
+			<LazyProjectItem @openModal="openModal" :project="project"/>
+		</div>
+
+	</div>
+	<UModal v-model:open="isOpen" fullscreen :title="currentProject.name">
+		<template #body>
+			<div class="flex justify-center items-center w-full h-full p-8">
+				<UCarousel v-if="currentProject.photos.length > 0" v-slot="{ item }"
+									 :items="currentProject.photos"
+									 :start-index="photoIndex"
+									 arrows class="w-[90%]"
+				>
+					<NuxtImg v-if="item.url" class="rounded-lg m-auto animation" loading="lazy"
+									 :alt="item.url"
+									 :src="`http://tatyana-arkhipova.ru:1337${item.url}`"></NuxtImg>
 				</UCarousel>
 			</div>
-			<pre class="p-8">{{ project.about }}</pre>
-		</div>
-		<div v-else class="w-full h-full">
-			<template>
-				<USkeleton class="h-[50px] w-full"/>
-			</template>
-			<USkeleton class="h-[200px] w-full"/>
-		</div>
-	</div>
+		</template>
+	</UModal>
 </template>
 
 <style scoped>

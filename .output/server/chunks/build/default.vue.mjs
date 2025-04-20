@@ -3,10 +3,9 @@ import { ssrRenderComponent, ssrRenderSlot, ssrRenderClass, ssrInterpolate, ssrR
 import { Primitive, useForwardPropsEmits, CollapsibleRoot, CollapsibleTrigger, CollapsibleContent, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuLink, NavigationMenuContent, NavigationMenuRoot, NavigationMenuList, NavigationMenuIndicator, NavigationMenuViewport } from 'reka-ui';
 import { reactivePick, createReusableTemplate } from '@vueuse/core';
 import { u as useButtonGroup, a as useComponentIcons, c as _sfc_main$5, i as isArrayOfArray, g as get, _ as _sfc_main$6, p as pickLinkProps, b as _sfc_main$7 } from './Link.vue2.mjs';
-import { a as _appConfig, b as useAppConfig } from './server.mjs';
+import { b as _appConfig, c as useAppConfig } from './server.mjs';
 import { t as tv } from './tv.mjs';
 import { _ as _sfc_main$4 } from './Icon.vue2.mjs';
-import './nuxt-link.mjs';
 import '../nitro/nitro.mjs';
 import 'node:http';
 import 'node:https';
@@ -18,6 +17,8 @@ import 'node:crypto';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
+import 'ipx';
+import './nuxt-link.mjs';
 import 'vue-router';
 import '@iconify/vue';
 import 'qs';
@@ -2131,7 +2132,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     ]);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UNavigationMenu = _sfc_main$1;
-      _push(`<!--[--><div class="w-full flex justify-around items-center sticky top-0 z-50 bg-white shadow"><h1 class="text-primary-500"> Татьяна Архипова </h1><h1 class="text-gray-500 !text-[28px] opacity-65 rotate-[-3deg]"> 3D Artist / 3D Modeler / 3D Visualizer </h1>`);
+      _push(`<!--[--><div class="w-full flex lg:flex-row flex-col justify-around items-center sticky top-0 z-50 bg-white shadow"><h1 class="text-primary-500 md:!text-[24px] md:mt-8 lg:mt-0 lg:!text-[32px]"> Татьяна Архипова </h1><h1 class="text-gray-500 hidden 2xl:block !text-[28px] opacity-65 rotate-[-3deg]"> 3D Artist / 3D Modeler / 3D Visualizer </h1>`);
       _push(ssrRenderComponent(_component_UNavigationMenu, {
         items: unref(navs),
         class: "justify-end px-4 p-8"

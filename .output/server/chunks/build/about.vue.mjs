@@ -14,6 +14,7 @@ import 'node:crypto';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
+import 'ipx';
 import 'vue-router';
 import '@iconify/vue';
 import 'qs';

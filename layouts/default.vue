@@ -31,11 +31,11 @@ const navs = ref<NavigationMenuItem[]>([
 </script>
 
 <template>
-	<div class="w-full flex justify-around items-center sticky top-0 z-50 bg-white shadow">
-		<h1 class="text-primary-500">
+	<div class="w-full flex lg:flex-row flex-col justify-around items-center sticky top-0 z-50 bg-white shadow">
+		<h1 class="text-primary-500 md:!text-[24px] md:mt-8 lg:mt-0 lg:!text-[32px]">
 			Татьяна Архипова
 		</h1>
-		<h1 class="text-gray-500 !text-[28px] opacity-65 rotate-[-3deg]">
+		<h1 class="text-gray-500 hidden 2xl:block !text-[28px] opacity-65 rotate-[-3deg]">
 			3D Artist / 3D Modeler / 3D Visualizer
 		</h1>
 		<UNavigationMenu :items="navs" class="justify-end px-4 p-8"/>

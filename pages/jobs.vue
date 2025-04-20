@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 const {find} = useStrapi()
 
 type Job = {
@@ -11,9 +12,11 @@ type Job = {
 
 const jobs = ref<Job[]>([])
 
+const client = useStrapiClient()
+
 const {data, refresh, error} = await useAsyncData(
 		'Experiences',
-		() => find<Job[]>('experiences')
+		() => find("experiences")
 )
 
 if (data.value !== null) {
@@ -30,6 +33,8 @@ if (data.value !== null) {
 		</div>
 	</div>
 
+	{{ error }}
+
 	<div class="px-[100px] py-[50px] w-full flex gap-4">
 		<div v-if="jobs.length > 0" class="w-full h-full border-0 animation" v-for="job in jobs" :key="job.id">
 			<div class="h-[60px] flex items-center justify-start gap-8 header">
@@ -43,9 +48,6 @@ if (data.value !== null) {
 			</div>
 		</div>
 		<div v-else class="w-full h-full">
-			<template>
-				<USkeleton class="h-[50px] w-full"/>
-			</template>
 			<USkeleton class="h-[200px] w-full"/>
 		</div>
 	</div>

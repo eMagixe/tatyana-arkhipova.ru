@@ -1,5 +1,5 @@
 import { ref, shallowRef, toRef, getCurrentInstance, onServerPrefetch, unref } from 'vue';
-import { f as useNuxtApp, i as asyncDataDefaults, j as createError } from './server.mjs';
+import { d as useNuxtApp, i as asyncDataDefaults, j as createError } from './server.mjs';
 
 const isDefer = (dedupe) => dedupe === "defer" || dedupe === false;
 function useAsyncData(...args) {

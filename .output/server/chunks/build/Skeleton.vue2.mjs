@@ -1,7 +1,7 @@
 import { defineComponent, unref, mergeProps, withCtx, renderSlot } from 'vue';
 import { ssrRenderComponent, ssrRenderSlot } from 'vue/server-renderer';
 import { Primitive } from 'reka-ui';
-import { a as _appConfig } from './server.mjs';
+import { b as _appConfig } from './server.mjs';
 import { t as tv } from './tv.mjs';
 
 const theme = {

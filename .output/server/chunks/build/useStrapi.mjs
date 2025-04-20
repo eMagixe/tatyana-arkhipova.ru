@@ -1,4 +1,4 @@
-import { c as useStrapiClient } from './server.mjs';
+import { a as useStrapiClient } from './server.mjs';
 
 const useStrapi = () => {
   const client = useStrapiClient();
