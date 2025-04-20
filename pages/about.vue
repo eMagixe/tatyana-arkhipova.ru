@@ -25,10 +25,10 @@ if (about.value !== null) {
 
 <template>
 	<div
-			class="bg-[url('/images/skills.jpg')] pl-[100px] w-full h-[200px] bg-cover bg-center">
-	</div>
-	<div class="w-full h-[80px] px-[100px] gradient-bg flex justify-start items-center">
-		<h1 class="text-4xl text-white">Обо мне</h1>
+			class="bg-[url('/images/jobs.jpg')] flex justify-start items-end w-full h-[280px] bg-cover bg-center">
+		<div class="w-full h-[80px] px-[100px] gradient-bg flex justify-start opacity-95 items-center">
+			<h1 class="text-4xl text-white">Обо мне</h1>
+		</div>
 	</div>
 	<div class="flex px-[100px] py-[50px] gap-8">
 		<div class="w-[30%]">

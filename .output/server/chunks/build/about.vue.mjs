@@ -41,7 +41,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     }
     return (_ctx, _push, _parent, _attrs) => {
       var _a, _b;
-      _push(`<!--[--><div class="bg-[url(&#39;/images/skills.jpg&#39;)] pl-[100px] w-full h-[200px] bg-cover bg-center"></div><div class="w-full h-[80px] px-[100px] gradient-bg flex justify-start items-center"><h1 class="text-4xl text-white">Обо мне</h1></div><div class="flex px-[100px] py-[50px] gap-8"><div class="w-[30%]"><img${ssrRenderAttr("src", `http://tatyana-arkhipova.ru:1337${(_a = unref(aboutData)) == null ? void 0 : _a.my_photo[0].url}`)} alt="my_photo"></div><div class="w-[70%] flex flex-col gap-4"><h2 class="text-2xl font-bold text-primary-500">Почему я занимаюсь моделированием?</h2><!--[-->`);
+      _push(`<!--[--><div class="bg-[url(&#39;/images/jobs.jpg&#39;)] flex justify-start items-end w-full h-[280px] bg-cover bg-center"><div class="w-full h-[80px] px-[100px] gradient-bg flex justify-start opacity-95 items-center"><h1 class="text-4xl text-white">Обо мне</h1></div></div><div class="flex px-[100px] py-[50px] gap-8"><div class="w-[30%]"><img${ssrRenderAttr("src", `http://tatyana-arkhipova.ru:1337${(_a = unref(aboutData)) == null ? void 0 : _a.my_photo[0].url}`)} alt="my_photo"></div><div class="w-[70%] flex flex-col gap-4"><h2 class="text-2xl font-bold text-primary-500">Почему я занимаюсь моделированием?</h2><!--[-->`);
       ssrRenderList((_b = unref(aboutData)) == null ? void 0 : _b.about_me.split("\n"), (item) => {
         _push(`<div class="w-full">${ssrInterpolate(item)}</div>`);
       });

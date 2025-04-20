@@ -50,7 +50,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UIcon = _sfc_main$1;
       const _component_USkeleton = _sfc_main$2;
-      _push(`<!--[--><div class="bg-[url(&#39;/images/skills.jpg&#39;)] pl-[100px] w-full h-[200px] bg-cover bg-center"></div><div class="w-full h-[80px] px-[100px] gradient-bg flex justify-start items-center"><h1 class="text-4xl text-white">Мои навыки</h1></div><div class="px-[100px] py-[50px] w-full flex flex-col gap-4">`);
+      _push(`<!--[--><div class="bg-[url(&#39;/images/skills.jpg&#39;)] flex justify-start items-end w-full h-[280px] bg-cover bg-center"><div class="w-full h-[80px] px-[100px] gradient-bg flex justify-start opacity-95 items-center"><h1 class="text-4xl text-white">Мои навыки</h1></div></div><div class="px-[100px] py-[50px] w-full flex flex-col gap-4">`);
       if (unref(skills).length > 0) {
         _push(`<!--[-->`);
         ssrRenderList(unref(skills), (skill) => {

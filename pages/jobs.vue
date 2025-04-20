@@ -24,11 +24,12 @@ if (data.value !== null) {
 
 <template>
 	<div
-			class="bg-[url('/images/jobs.jpg')] pl-[100px] w-full h-[200px] bg-cover bg-center">
+			class="bg-[url('/images/jobs.jpg')] flex justify-start items-end w-full h-[280px] bg-cover bg-center">
+		<div class="w-full h-[80px] px-[100px] gradient-bg flex justify-start opacity-95 items-center">
+			<h1 class="text-4xl text-white">Мой опыт работы</h1>
+		</div>
 	</div>
-	<div class="w-full h-[80px] px-[100px] gradient-bg flex justify-start items-center">
-		<h1 class="text-4xl text-white">Мой опыт работы</h1>
-	</div>
+
 	<div class="px-[100px] py-[50px] w-full flex gap-4">
 		<div v-if="jobs.length > 0" class="w-full h-full border-0 animation" v-for="job in jobs" :key="job.id">
 			<div class="h-[60px] flex items-center justify-start gap-8 header">
