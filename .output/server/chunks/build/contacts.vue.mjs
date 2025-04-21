@@ -51,7 +51,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       if (unref(contacts).length > 0) {
         _push(`<!--[-->`);
         ssrRenderList(unref(contacts), (contact) => {
-          _push(`<div class="w-full h-full border-0 animation"><div class="h-[60px] flex items-center justify-start gap-8 header"><div class="w-[2px] h-[60px] gradient-bg"></div><h2 class="text-2xl font-bold text-primary-500"><a${ssrRenderAttr("href", contact.text)} class="flex justify-center items-center gap-2">`);
+          _push(`<div class="w-full h-full border-0 animation"><div class="h-[60px] flex items-center justify-start gap-8 header"><div class="w-[2px] h-[60px] gradient-bg"></div><h2 class="text-2xl font-bold text-primary-500"><a${ssrRenderAttr("href", contact.link)} class="flex justify-center items-center gap-2">`);
           _push(ssrRenderComponent(_component_UIcon, {
             name: `i-lucide-${contact.icon}`
           }, null, _parent));

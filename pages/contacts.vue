@@ -5,6 +5,7 @@ type Contact = {
 	id: number
 	icon: string
 	text: string
+	link: string
 	description: string
 }
 
@@ -34,7 +35,7 @@ if (data.value !== null) {
 			<div class="h-[60px] flex items-center justify-start gap-8 header">
 				<div class="w-[2px] h-[60px] gradient-bg"></div>
 				<h2 class="text-2xl font-bold text-primary-500">
-					<a :href="contact.text" class="flex justify-center items-center gap-2">
+					<a :href="contact.link" class="flex justify-center items-center gap-2">
 						<UIcon :name="`i-lucide-${contact.icon}`"/>
 						<p>{{ contact.text }}</p>
 					</a>
