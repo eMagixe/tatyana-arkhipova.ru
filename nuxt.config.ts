@@ -14,7 +14,7 @@ export default defineNuxtConfig({
 		colorMode: false
 	},
 	strapi: {
-		url: 'http://tatyana-arkhipova.ru:1337',
+		url: 'https://api.tatyana-arkhipova.ru',
 		version: 'v5',
 		prefix: '/',
 	},
