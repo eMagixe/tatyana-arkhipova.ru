@@ -1758,7 +1758,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 default: withCtx(({ item }, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
                     if (item.url) {
-                      _push3(`<img class="rounded-lg m-auto animation" loading="lazy"${ssrRenderAttr("alt", item.url)}${ssrRenderAttr("src", `http://tatyana-arkhipova.ru:1337${item.url}`)}${_scopeId2}>`);
+                      _push3(`<img class="rounded-lg m-auto animation" loading="lazy"${ssrRenderAttr("alt", item.url)}${ssrRenderAttr("src", `http://212.67.8.32:1337${item.url}`)}${_scopeId2}>`);
                     } else {
                       _push3(`<!---->`);
                     }
@@ -1769,7 +1769,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         class: "rounded-lg m-auto animation",
                         loading: "lazy",
                         alt: item.url,
-                        src: `http://tatyana-arkhipova.ru:1337${item.url}`
+                        src: `http://212.67.8.32:1337${item.url}`
                       }, null, 8, ["alt", "src"])) : createCommentVNode("", true)
                     ];
                   }
@@ -1796,7 +1796,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       class: "rounded-lg m-auto animation",
                       loading: "lazy",
                       alt: item.url,
-                      src: `http://tatyana-arkhipova.ru:1337${item.url}`
+                      src: `http://212.67.8.32:1337${item.url}`
                     }, null, 8, ["alt", "src"])) : createCommentVNode("", true)
                   ]),
                   _: 1
