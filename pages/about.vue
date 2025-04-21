@@ -32,7 +32,7 @@ if (about.value !== null) {
 	</div>
 	<div class="flex px-[100px] py-[50px] gap-8">
 		<div class="w-[30%]">
-			<img :src="`http://tatyana-arkhipova.ru:1337${aboutData?.my_photo[0].url}`" alt="my_photo">
+			<img :src="`https://api.tatyana-arkhipova.ru${aboutData?.my_photo[0].url}`" alt="my_photo">
 		</div>
 		<div class=" w-[70%] flex flex-col gap-4">
 			<h2 class="text-2xl font-bold text-primary-500">Почему я занимаюсь моделированием?</h2>
