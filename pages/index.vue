@@ -71,7 +71,7 @@ const openModal = (project: Project, id: number) => {
 				>
 					<img v-if="item.url" class="rounded-lg m-auto animation "
 							 :alt="item.url"
-							 :src="`http://212.67.8.32${item.url}`"/>
+							 :src="`https://api.tatyana-arkhipova.ru/${item.url}`"/>
 				</UCarousel>
 			</div>
 		</template>
