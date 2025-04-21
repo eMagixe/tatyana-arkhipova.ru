@@ -1697,13 +1697,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   async setup(__props) {
     let __temp, __restore;
     const { find } = useStrapi();
-    const projects = ref([]);
+    const projects = ref(/* @__PURE__ */ new Set());
     const { data, status } = ([__temp, __restore] = withAsyncContext(() => useAsyncData(
       "projects",
       () => find("projects")
     )), __temp = await __temp, __restore(), __temp);
     if (data.value !== null) {
-      projects.value = data.value;
+      projects.value = new Set([...data.value].reverse());
     }
     const isOpen = ref(false);
     const currentProject = ref({
@@ -1724,7 +1724,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const _component_UModal = _sfc_main$2;
       const _component_UCarousel = _sfc_main$1;
       _push(`<!--[--><div class="bg-[url(&#39;/images/skills.jpg&#39;)] flex justify-start items-end w-full h-[280px] bg-cover bg-center"><div class="w-full h-[80px] px-[100px] gradient-bg flex justify-start opacity-95 items-center"><h1 class="text-4xl text-white">Проекты</h1></div></div><div class="px-[100px] py-[50px] w-full flex flex-col gap-4">`);
-      if (unref(projects) && unref(projects).length > 0) {
+      if (unref(projects) && unref(projects).size > 0) {
         _push(`<!--[-->`);
         ssrRenderList(unref(projects), (project) => {
           _push(`<div class="w-full h-full border-0 animation">`);

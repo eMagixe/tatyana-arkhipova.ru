@@ -7,6 +7,7 @@ type Project = {
 	name: string
 	about: string
 	type: string
+	created_at?: string
 	photos: {
 		url: string, formats: {
 			small: { url: string }
@@ -14,7 +15,7 @@ type Project = {
 	}[]
 }
 
-const projects = ref<Project[]>([])
+const projects = ref<Set<Project>>(new Set())
 
 const {data, status} = await useAsyncData(
 		'projects',
@@ -22,7 +23,7 @@ const {data, status} = await useAsyncData(
 )
 
 if (data.value !== null) {
-	projects.value = data.value as any
+	projects.value = new Set([...data.value as any].reverse())
 }
 
 const isOpen = ref(false)
@@ -52,7 +53,7 @@ const openModal = (project: Project, id: number) => {
 		</div>
 	</div>
 	<div class="px-[100px] py-[50px] w-full flex flex-col gap-4">
-		<div v-if="projects && projects.length > 0"
+		<div v-if="projects && projects.size > 0"
 				 class="w-full h-full border-0 animation"
 				 v-for="project in projects"
 				 :key="project.id"
