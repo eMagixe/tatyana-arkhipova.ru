@@ -20,6 +20,7 @@ export default defineNuxtConfig({
 	},
 	app: {
 		head: {
+			title: 'Татьяна Архипова - 3D Дизайнер',
 			link: [{rel: 'icon', type: 'image/svg', href: '/favicon.svg'}]
 		}
 	}
