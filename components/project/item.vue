@@ -34,8 +34,8 @@ const props = defineProps<Props>()
 								 loop
 								 dots
 								 class="w-full h-[350px] flex mb-[30px]">
-				<img loading="lazy" v-if="item.url" @click="$emit('openModal', props.project, index)" :alt="item.url"
-						 :src="`http://212.67.8.32:1337${item.url}`"
+				<img v-if="item.url" @click="$emit('openModal', props.project, index)" :alt="item.url"
+						 :src="`http://212.67.8.32${item.url}`"
 						 class="rounded-lg cursor-pointer"/>
 			</UCarousel>
 		</div>

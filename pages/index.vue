@@ -69,9 +69,9 @@ const openModal = (project: Project, id: number) => {
 									 :start-index="photoIndex"
 									 arrows class="w-[90%]"
 				>
-					<img v-if="item.url" class="rounded-lg m-auto animation " loading="lazy"
+					<img v-if="item.url" class="rounded-lg m-auto animation "
 							 :alt="item.url"
-							 :src="`http://212.67.8.32:1337${item.url}`"/>
+							 :src="`http://212.67.8.32${item.url}`"/>
 				</UCarousel>
 			</div>
 		</template>

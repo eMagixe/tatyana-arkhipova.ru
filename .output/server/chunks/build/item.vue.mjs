@@ -63,7 +63,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             default: withCtx(({ item, index }, _push2, _parent2, _scopeId) => {
               if (_push2) {
                 if (item.url) {
-                  _push2(`<img loading="lazy"${ssrRenderAttr("alt", item.url)}${ssrRenderAttr("src", `http://212.67.8.32:1337${item.url}`)} class="rounded-lg cursor-pointer"${_scopeId}>`);
+                  _push2(`<img${ssrRenderAttr("alt", item.url)}${ssrRenderAttr("src", `http://212.67.8.32${item.url}`)} class="rounded-lg cursor-pointer"${_scopeId}>`);
                 } else {
                   _push2(`<!---->`);
                 }
@@ -71,10 +71,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 return [
                   item.url ? (openBlock(), createBlock("img", {
                     key: 0,
-                    loading: "lazy",
                     onClick: ($event) => _ctx.$emit("openModal", props.project, index),
                     alt: item.url,
-                    src: `http://212.67.8.32:1337${item.url}`,
+                    src: `http://212.67.8.32${item.url}`,
                     class: "rounded-lg cursor-pointer"
                   }, null, 8, ["onClick", "alt", "src"])) : createCommentVNode("", true)
                 ];
