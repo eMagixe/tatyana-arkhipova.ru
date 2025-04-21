@@ -18,5 +18,9 @@ export default defineNuxtConfig({
 		version: 'v5',
 		prefix: '/',
 	},
-
+	app: {
+		head: {
+			link: [{rel: 'icon', type: 'image/svg', href: '/favicon.svg'}]
+		}
+	}
 })
