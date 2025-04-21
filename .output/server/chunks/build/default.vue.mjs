@@ -1,12 +1,12 @@
 import { defineComponent, computed, unref, mergeProps, withCtx, renderSlot, createBlock, createCommentVNode, openBlock, toDisplayString, useSlots, createVNode, toRef, createTextVNode, resolveDynamicComponent, createSlots, Fragment, renderList, ref, useSSRContext } from 'vue';
-import { ssrRenderComponent, ssrRenderSlot, ssrRenderClass, ssrInterpolate, ssrRenderVNode, ssrRenderList } from 'vue/server-renderer';
+import { ssrRenderComponent, ssrRenderSlot, ssrRenderClass, ssrInterpolate, ssrRenderVNode, ssrRenderList, ssrRenderAttr } from 'vue/server-renderer';
+import { p as publicAssetsURL } from '../nitro/nitro.mjs';
 import { Primitive, useForwardPropsEmits, CollapsibleRoot, CollapsibleTrigger, CollapsibleContent, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuLink, NavigationMenuContent, NavigationMenuRoot, NavigationMenuList, NavigationMenuIndicator, NavigationMenuViewport } from 'reka-ui';
 import { reactivePick, createReusableTemplate } from '@vueuse/core';
 import { u as useButtonGroup, a as useComponentIcons, c as _sfc_main$5, i as isArrayOfArray, g as get, _ as _sfc_main$6, p as pickLinkProps, b as _sfc_main$7 } from './Link.vue2.mjs';
 import { b as _appConfig, c as useAppConfig } from './server.mjs';
 import { t as tv } from './tv.mjs';
 import { _ as _sfc_main$4 } from './Icon.vue2.mjs';
-import '../nitro/nitro.mjs';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -2100,6 +2100,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   }
 });
 
+const _imports_0 = publicAssetsURL("/images/logo.svg");
+
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "default",
   __ssrInlineRender: true,
@@ -2132,7 +2134,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     ]);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UNavigationMenu = _sfc_main$1;
-      _push(`<!--[--><div class="w-full flex lg:flex-row flex-col justify-around items-center sticky top-0 z-50 bg-white shadow"><h1 class="text-primary-500 md:!text-[24px] md:mt-8 lg:mt-0 lg:!text-[32px]"> Татьяна Архипова </h1><h1 class="text-gray-500 hidden 2xl:block !text-[28px] opacity-65 rotate-[-3deg]"> 3D Artist / 3D Modeler / 3D Visualizer </h1>`);
+      _push(`<!--[--><div class="w-full flex lg:flex-row flex-col justify-around items-center sticky top-0 z-50 bg-white shadow"><h1 class="text-primary-500 md:!text-[24px] flex justify-center items-center gap-4 md:mt-8 lg:mt-0 lg:!text-[32px]"><img alt="logo"${ssrRenderAttr("src", _imports_0)} class="w-[50px] h-[50px]"> Татьяна Архипова </h1><h1 class="text-gray-500 hidden 2xl:block !text-[28px] opacity-65 rotate-[-3deg]"> 3D Artist / 3D Modeler / 3D Visualizer </h1>`);
       _push(ssrRenderComponent(_component_UNavigationMenu, {
         items: unref(navs),
         class: "justify-end px-4 p-8"
